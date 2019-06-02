@@ -139,7 +139,7 @@ var server = http.createServer(function(request,response){
                     }
                 }
                 if(isEmailMatch && isPasswordMatch){
-                    response.setHeader('Set-Cookie',[`mysite_email=${userMessage.email};Max-Age=300;HttpOnly`,`mysite_password=${userMessage.password};Max-Age=300;HttpOnly`]);
+                    response.setHeader('Set-Cookie',[`mysite_email=${userMessage.email};Max-Age=300;`,`mysite_password=${userMessage.password};Max-Age=300;`]);
                     response.statusCode = 200;
                 }else if(isEmailMatch && !isPasswordMatch){
 

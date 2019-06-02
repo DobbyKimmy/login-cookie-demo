@@ -12,11 +12,10 @@
     <script>
         // 退出登陆时清空 cookie
         $('#clearCookie').on('click',()=>{
-            deleteCookie('email');
-            deleteCookie('password');
+            deleteCookie('mysite_password');
+            deleteCookie('mysite_email');
             window.location.href = '/login';
         })
-
         function deleteCookie (name){
             // 设置让 cookie 无效的方法 让cookie的期限 expires 为 现在
             document.cookie = name + '=; expires='+new Date().toGMTString();
